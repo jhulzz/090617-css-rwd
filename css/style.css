@@ -15,41 +15,44 @@
 ul > li {
 	list-style: none;
 	background-color: #92B6B1; /*cadet grey*/
-	margin-bottom: 2px;
+	margin-bottom: 5px;
 	line-height: 48px;
 	text-align: center;
 }
 
 ul > li > a {
 	text-decoration: none;
-	
 }
 
+.logo {
+	margin-bottom: 20px;
+}
 
 .banner {
 	background-color: #666A86; /*shadow blue*/
-	height: 700px;
 	position: relative;
+	min-height: 500px;
 }
 
 .about {
 	background-color: #92B6B1; /*cadet grey*/
-	height: 700px;
+	min-height: 300px;
+
 }
 
 .services {
 	background-color: #666A86; /*shadow blue*/
-	height: 300px;
+	min-height: 300px;
 }
 
 .projects {
 	background-color: #92B6B1; /*cadet grey*/
-	height: 300px;
+	min-height: 300px;
 }
 
 .gallery {
 	background-color: #666A86; /*shadow blue*/
-	height: 400px;
+	min-height: 400px;
 }
 
 
@@ -94,4 +97,131 @@ footer {
 
 h1, h2 { 
 	color: white; 
+}
+
+.column {
+	border: 1px solid #FFF;
+	width: 31%;
+	float: left;
+	margin-left: 1%;
+	margin-right: 1%;
+	padding: 10px;
+	border-radius: 5px;
+	color: #FFF;
+}
+
+.clear:after { 
+	content: "";
+	display: block;
+	clear: both;
+ }
+
+ img[alt*="Services"] {
+ 	border: 1px solid #fff;
+ 	width: 60px;
+ 	height: 60px;
+ 	display: block;
+ 	float: left;
+ 	margin-right: 10px;
+ }
+
+img[alt*="Services"] ~ h3 {
+	margin-bottom: 10px;
+}
+
+img[alt*="Services"] ~ p { /*sibling*/
+ 	overflow: hidden; /*justify paragraph*/
+}
+
+.gallery > .column {
+	width: 23%; /*override value of width under .column*/
+	margin: 0 1%; /* shorthand top bottom 0 value 1%right and left*/
+	border-color: #000;
+}
+
+img[alt*="Gallery"] {
+	display: block;
+	border: 1px solid #000;
+	width: 100%; /*width of parent container is gallery*/
+	height: 100px;
+ }
+
+ img[alt*="Social"] {
+ 	width: 20px;
+ 	height: 20px;
+ 	border: 1px solid #000;
+ 	display: block;
+ 	float: left;
+ 	margin-right: 10px;
+}
+
+div.contact {  
+	float: right;
+}
+
+
+
+/*mobile*/
+@media only screen and (max-width: 400px) {
+
+	nav {
+		position: static;
+		margin:0 auto;
+		width: 100%;
+
+	}
+
+	main {
+		margin:0 auto;
+		width: 100%;
+	}
+
+	.column {
+	 	width: 90%;
+	 	height: 20%;
+ 		}
+
+ 	.gallery > .column {
+		width: 90%; 
+		margin: 0 1%;
+		height: 20%; 
+		border-color: #fff;
+		}
+
+	.box {
+		border: 5px solid #FFFFFF;
+		text-align: center;
+		width: 90%;
+		padding: 40px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		}
+
+}
+
+/*tablet*/
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+	.column {
+	 	width: 90%;
+	 	height: 30%;
+ 		}
+
+ 	.gallery > .column {
+	width: 45%; 
+	margin: 0 1%;
+	height: 35%; 
+	float: left;
+	border-color: #fff;
+		}
+}
+
+/*laptop/desktop*/
+
+@media only screen and (min-width: 961px) {
+	
+
 }
